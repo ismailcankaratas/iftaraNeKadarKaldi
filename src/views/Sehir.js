@@ -1,14 +1,7 @@
 import React from 'react';
 import PageTitle from '../Components/toolbox/PageTitle';
-import ProgressBar from '../Components/toolbox/ProgressBar';
 
 const Sehir = ({ city, currentCity }) => {
-    function saat() {
-        var suan = "18:28";
-        var gelen = "19:40"
-        var sonuc = parseFloat(gelen) - parseFloat(suan);
-        return sonuc;
-    }
     return (
         <>
             <PageTitle title={city.toUpperCase()} urlIsActive="true" />
