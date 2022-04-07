@@ -33,13 +33,13 @@ export default function Navbar(props) {
                                         <div className="flex items-center">
                                             <div className="md:w-6 md:h-6 w-5 h-5">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                                    <path d="M7.16667 3H3.83333C3.3731 3 3 3.3731 3 3.83333V7.16667C3 7.6269 3.3731 8 3.83333 8H7.16667C7.6269 8 8 7.6269 8 7.16667V3.83333C8 3.3731 7.6269 3 7.16667 3Z" stroke="#667EEA" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
-                                                    <path d="M7.16667 11.6667H3.83333C3.3731 11.6667 3 12.0398 3 12.5V15.8333C3 16.2936 3.3731 16.6667 3.83333 16.6667H7.16667C7.6269 16.6667 8 16.2936 8 15.8333V12.5C8 12.0398 7.6269 11.6667 7.16667 11.6667Z" stroke="#667EEA" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
-                                                    <path d="M16.1667 11.6667H12.8333C12.3731 11.6667 12 12.0398 12 12.5V15.8334C12 16.2936 12.3731 16.6667 12.8333 16.6667H16.1667C16.6269 16.6667 17 16.2936 17 15.8334V12.5C17 12.0398 16.6269 11.6667 16.1667 11.6667Z" stroke="#667EEA" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
-                                                    <path d="M16.1667 3H12.8333C12.3731 3 12 3.3731 12 3.83333V7.16667C12 7.6269 12.3731 8 12.8333 8H16.1667C16.6269 8 17 7.6269 17 7.16667V3.83333C17 3.3731 16.6269 3 16.1667 3Z" stroke="#667EEA" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
+                                                    <path d="M7.16667 3H3.83333C3.3731 3 3 3.3731 3 3.83333V7.16667C3 7.6269 3.3731 8 3.83333 8H7.16667C7.6269 8 8 7.6269 8 7.16667V3.83333C8 3.3731 7.6269 3 7.16667 3Z" stroke="#FA7316" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
+                                                    <path d="M7.16667 11.6667H3.83333C3.3731 11.6667 3 12.0398 3 12.5V15.8333C3 16.2936 3.3731 16.6667 3.83333 16.6667H7.16667C7.6269 16.6667 8 16.2936 8 15.8333V12.5C8 12.0398 7.6269 11.6667 7.16667 11.6667Z" stroke="#FA7316" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
+                                                    <path d="M16.1667 11.6667H12.8333C12.3731 11.6667 12 12.0398 12 12.5V15.8334C12 16.2936 12.3731 16.6667 12.8333 16.6667H16.1667C16.6269 16.6667 17 16.2936 17 15.8334V12.5C17 12.0398 16.6269 11.6667 16.1667 11.6667Z" stroke="#FA7316" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
+                                                    <path d="M16.1667 3H12.8333C12.3731 3 12 3.3731 12 3.83333V7.16667C12 7.6269 12.3731 8 12.8333 8H16.1667C16.6269 8 17 7.6269 17 7.16667V3.83333C17 3.3731 16.6269 3 16.1667 3Z" stroke="#FA7316" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
                                                 </svg>
                                             </div>
-                                            <p className="text-indigo-500 ml-3 text-lg">Dashboard</p>
+                                            <p className="text-orange-500 ml-3 text-lg">AnaSayfa</p>
                                         </div>
                                     </li>
                                 </a>
@@ -58,7 +58,7 @@ export default function Navbar(props) {
                                                         />
                                                     </svg>
                                                 </div>
-                                                <p className="text-gray-700 ml-3 text-lg">Products</p>
+                                                <p className="text-gray-700 ml-3 text-lg">Şehirler</p>
                                             </div>
                                             <div onClick={() => setProduct(!product)}>
                                                 {product ? (
@@ -81,66 +81,9 @@ export default function Navbar(props) {
                                         {product ? (
                                             <div>
                                                 <ul className="my-3">
-                                                    <li className="text-sm text-indigo-500 py-2 px-6">Best Sellers</li>
-                                                    <li className="text-sm text-gray-800 hover:text-indigo-500 py-2 px-6">Out of Stock</li>
-                                                    <li className="text-sm text-gray-800 hover:text-indigo-500 py-2 px-6">New Products</li>
-                                                </ul>
-                                            </div>
-                                        ) : (
-                                            ""
-                                        )}
-                                    </li>
-                                </a>
-                                <a>
-                                    <li className="text-gray-800 pt-8">
-                                        <div className="flex items-center">
-                                            <div className="md:w-6 md:h-6 w-5 h-5">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                                    <path d="M6.66667 13.3333L8.33334 8.33334L13.3333 6.66667L11.6667 11.6667L6.66667 13.3333Z" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
-                                                    <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            </div>
-                                            <p className="text-gray-800 ml-3 text-lg">Performance</p>
-                                        </div>
-                                    </li>
-                                </a>
-                                <a>
-                                    <li className="text-gray-800 pt-8">
-                                        <div className="flex items-center">
-                                            <div className="flex items-center">
-                                                <div className="md:w-6 md:h-6 w-5 h-5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                                        <path d="M5.83333 6.66667L2.5 10L5.83333 13.3333" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
-                                                        <path d="M14.1667 6.66667L17.5 10L14.1667 13.3333" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
-                                                        <path d="M11.6667 3.33333L8.33333 16.6667" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
-                                                    </svg>
-                                                </div>
-                                                <p className="text-gray-800 ml-3 text-lg">Deliverables</p>
-                                            </div>
-                                            <div onClick={() => setDeliverables(!deliverables)}>
-                                                {deliverables ? (
-                                                    <div className=" ml-4">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width={14} height={14} viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                            <polyline points="6 15 12 9 18 15" />
-                                                        </svg>
-                                                    </div>
-                                                ) : (
-                                                    <div className="ml-4">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={14} height={14} viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                            <polyline points="6 9 12 15 18 9" />
-                                                        </svg>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                        {deliverables ? (
-                                            <div>
-                                                <ul className="my-3">
-                                                    <li className="text-sm text-indigo-500 py-2 px-6">Best Sellers</li>
-                                                    <li className="text-sm text-gray-800 hover:text-indigo-500 py-2 px-6">Out of Stock</li>
-                                                    <li className="text-sm text-gray-800 hover:text-indigo-500 py-2 px-6">New Products</li>
+                                                    <li className="text-sm text-orange-500 py-2 px-6"><Link to="/sehir/istanbul">İstanbul</Link></li>
+                                                    <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6"><Link to="/sehir/ankara">Ankara</Link></li>
+                                                    <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6"><Link to="/sehir/izmir">İzmir</Link></li>
                                                 </ul>
                                             </div>
                                         ) : (
@@ -150,7 +93,7 @@ export default function Navbar(props) {
                                 </a>
                             </ul>
                         </div>
-                        <div className="w-full">
+                        {/* <div className="w-full">
                             <div className="flex justify-center mb-4 w-full px-6">
                                 <div className="relative w-full">
                                     <div className="text-gray-500 absolute ml-4 inset-0 m-auto w-4 h-4">
@@ -187,7 +130,7 @@ export default function Navbar(props) {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
