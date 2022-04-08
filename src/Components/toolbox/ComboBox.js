@@ -97,11 +97,11 @@ export default function ComboBox() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const filteredPeople =
+    const filteredCity =
         query === ''
             ? cities
-            : cities.filter((person) =>
-                dispatch(Cevir(person.name)).replace(/\s+/g, '')
+            : cities.filter((city) =>
+                dispatch(Cevir(city.name)).replace(/\s+/g, '')
                     .includes(dispatch(Cevir(query)).replace(/\s+/g, ''))
             )
     function selectToNavigate(event) {
@@ -124,7 +124,7 @@ export default function ComboBox() {
                             autoComplete="off"
                             placeholder='Şehir arayın'
                             className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500 pl-10 py-2"
-                            displayValue={(person) => person.name}
+                            displayValue={(city) => city.name}
                             onChange={(event) => setQuery(event.target.value)}
                         />
                         <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -142,36 +142,36 @@ export default function ComboBox() {
                         afterLeave={() => setQuery('')}
                     >
                         <Combobox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                            {filteredPeople.length === 0 && query !== '' ? (
+                            {filteredCity.length === 0 && query !== '' ? (
                                 <div className="cursor-default select-none relative py-2 px-4 text-gray-700">
                                     Aranan Şehir Bulunamadı.
                                 </div>
                             ) : (
-                                filteredPeople.map((person) => (
+                                filteredCity.map((city) => (
                                     <Combobox.Option
-                                        key={person.id}
+                                        key={city.id}
                                         className={({ active }) =>
                                             `cursor-default select-none relative py-2 pl-10 pr-4 ${active ? 'text-white bg-orange-500' : 'text-gray-900'
                                             }`
                                         }
-                                        value={person}
+                                        value={city}
                                     >
 
                                         {({ selected, active }) => (
                                             <>
                                                 <Link
-                                                    to={"/sehir/" + person.name.toLowerCase()}
+                                                    to={"/sehir/" + city.name.toLowerCase()}
                                                     className={`block truncate ${selected ? 'font-medium' : 'font-normal'
                                                         }`}
                                                 >
                                                     <div className="text-orange-600 absolute ml-4 inset-0 flex items-center">
-                                                        {person.id == 0 ? "" : person.id}
+                                                        {city.id == 0 ? "" : city.id}
                                                     </div>
-                                                    {person.name}
+                                                    {city.name}
                                                 </Link>
                                                 {selected ? (
                                                     <Link
-                                                        to={"/sehir/" + person.name.toLowerCase()}
+                                                        to={"/sehir/" + city.name.toLowerCase()}
                                                         className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-teal-600'
                                                             }`}
                                                     >
