@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/image/Logo.png'
+import ComboBox from '../Components/toolbox/ComboBox';
 import PageTitle from '../Components/toolbox/PageTitle';
 
 const Home = () => {
     return (
         <>
-            <PageTitle title="İftara Ne Kadar Kaldı?" />
+            <PageTitle title="İftara Ne Kadar Kaldı?" whatsappMessage={"İftara ne kadar kaldığını görmek için: " + window.location.href} />
             <div className="container px-6 mx-auto">
                 <div className="rounded shadow relative bg-white z-10 -mt-8 mb-8 w-full h-96">
                     <div className="flex justify-center pt-6 pb-3">
@@ -17,14 +18,8 @@ const Home = () => {
                     </div>
                     <div className="flex justify-center my-4 w-full px-6">
                         <div className="relative w-2/4">
-                            <div className="text-gray-500 absolute ml-4 inset-0 m-auto w-4 h-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width={16} height={16} viewBox="0 0 24 24" strokeWidth={1} stroke="#A0AEC0" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <circle cx={10} cy={10} r={7} />
-                                    <line x1={21} y1={21} x2={15} y2={15} />
-                                </svg>
-                            </div>
-                            <input className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500 pl-10 py-2" type="text" placeholder="Search" />
+
+                            <ComboBox />
                         </div>
                     </div>
                     <div>

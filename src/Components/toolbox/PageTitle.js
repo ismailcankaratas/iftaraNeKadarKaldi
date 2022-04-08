@@ -1,5 +1,8 @@
 import { FaWhatsapp } from 'react-icons/fa';
-const PageTitle = ({ title, urlIsActive }) => {
+const PageTitle = ({ title, urlIsActive, whatsappMessage }) => {
+    function pageBack() {
+        window.history.back()
+    }
     function urlActive(urlIsActive) {
         if (urlIsActive) {
             return (
@@ -35,13 +38,13 @@ const PageTitle = ({ title, urlIsActive }) => {
                         </div>
                     </div>
                     <div className='flex'>
-                        <button className="focus:outline-none mr-3 bg-transparent transition duration-150 ease-in-out rounded hover:bg-gray-700 text-white px-5 py-2 text-sm border border-white">
+                        <button onClick={pageBack} className="focus:outline-none mr-3 bg-transparent transition duration-150 ease-in-out rounded hover:bg-gray-700 text-white px-5 py-2 text-sm border border-white">
                             Geri
                         </button>
-                        <button className="focus:outline-none flex items-center space-x-1 transition duration-150 ease-in-out hover:bg-gray-200 border bg-white rounded text-indigo-700 px-8 py-2 text-sm">
+                        <a href={"https://wa.me/?text=" + whatsappMessage} data-action="share/whatsapp/share" target="blank" className="focus:outline-none flex items-center space-x-1 transition duration-150 ease-in-out hover:bg-gray-200 border bg-white rounded text-indigo-700 px-8 py-2 text-sm">
                             <FaWhatsapp />
                             <div>Paylaş</div>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

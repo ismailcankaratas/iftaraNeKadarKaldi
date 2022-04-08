@@ -19,7 +19,7 @@ export const namazVakitleriSlice = createSlice({
 })
 
 export const getCurrentCityAsync = (city) => (dispatch) => {
-    const apiUrl = "https://api.collectapi.com/pray/single?ezan=Akşam&data.city=" + city;
+    const apiUrl = "https://api.collectapi.com/pray/single?ezan=Akşam&data.city=" + dispatch(Cevir(city));
     const apiKey = "1Ob5SswhEmezvoNBbIz3Uh:05wGrbFPN9ZiFjZUzw54HK"
     dispatch(getCityChange(city));
     return fetch(apiUrl, {
@@ -36,6 +36,24 @@ export const getCurrentCityAsync = (city) => (dispatch) => {
 export function handleError(error) {
     console.log("Api hatası oluştu.");
     throw error;
+}
+export const Cevir = (text) => (dispatch) => {
+    var trMap = {
+        'çÇ': 'c',
+        'ğĞ': 'g',
+        'şŞ': 's',
+        'üÜ': 'u',
+        'ıİ': 'i',
+        'öÖ': 'o'
+    };
+    for (var key in trMap) {
+        text = text.replace(new RegExp('[' + key + ']', 'g'), trMap[key]);
+    }
+    return text.replace(/[^-a-zA-Z0-9\s]+/ig, '')
+        .replace(/\s/gi, "-")
+        .replace(/[-]+/gi, "-")
+        .toLowerCase();
+
 }
 
 

@@ -150,27 +150,24 @@ export default function Navbar(props) {
                             <li className="hover:text-orange-600 cursor-pointer h-full flex items-center text-sm text-orange-600 tracking-normal">
                                 <Link to="/">AnaSayfa</Link>
                             </li>
-                            <li className="hover:text-orange-600 cursor-pointer h-full flex items-center text-sm text-gry-800 mr-10 tracking-normal">
-                                <Link to="/sehir/istanbul">İstanbul</Link>
-                            </li>
-                            {/* <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-gray-800 tracking-normal relative">
+                            <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-gray-800 tracking-normal relative">
                                 {deliverables ? (
                                     <ul className="bg-white shadow rounded py-1 w-32 left-0 mt-16 -ml-4 absolute  top-0">
-                                        <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 px-3 font-normal">Landing Pages</li>
-                                        <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 px-3 font-normal">Templates</li>
-                                        <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 px-3 font-normal">Components</li>
+                                        <li className="text-sm text-orange-500 py-2 px-6"><Link to="/sehir/istanbul">İstanbul</Link></li>
+                                        <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6"><Link to="/sehir/ankara">Ankara</Link></li>
+                                        <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6"><Link to="/sehir/izmir">İzmir</Link></li>
                                     </ul>
                                 ) : (
                                     ""
                                 )}
-                                Deliverables
+                                Şehirler
                                 <span className="ml-2" onClick={() => setDeliverables(!deliverables)}>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={16} height={16} viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" />
                                         <polyline points="6 9 12 15 18 9" />
                                     </svg>
                                 </span>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                     <div className="h-full xl:flex hidden items-center justify-end">
