@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaWhatsapp, FaGithub } from 'react-icons/fa';
 import Logo from '../assets/image/Logo.png'
+import { useSelector } from "react-redux";
 export default function Navbar(props) {
     const [show, setShow] = useState(false);
     const [product, setProduct] = useState(false);
     const [deliverables, setDeliverables] = useState(false);
-    const [profile, setProfile] = useState(false); return (
+    const [profile, setProfile] = useState(false);
+    const cities = useSelector(state => state.namazVakitleriSlice.cities)
+    return (
         <>
             {/* Navigation starts */}
             {/* Mobile */}
@@ -81,9 +84,13 @@ export default function Navbar(props) {
                                         {product ? (
                                             <div>
                                                 <ul className="my-3">
-                                                    <li className="text-sm text-orange-500 py-2 px-6"><Link to="/sehir/istanbul">İstanbul</Link></li>
-                                                    <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6"><Link to="/sehir/ankara">Ankara</Link></li>
-                                                    <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6"><Link to="/sehir/izmir">İzmir</Link></li>
+                                                    {cities.map(city => (
+                                                        <li className="text-sm hover:text-orange-500 py-2 px-6" key={city.id}>
+                                                            <a href={"/sehir/" + city.name.toLowerCase()}>
+                                                                {city.name}
+                                                            </a>
+                                                        </li>
+                                                    ))}
                                                 </ul>
                                             </div>
                                         ) : (
@@ -153,9 +160,14 @@ export default function Navbar(props) {
                             <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-gray-800 tracking-normal relative">
                                 {deliverables ? (
                                     <ul className="bg-white shadow rounded py-1 w-32 left-0 mt-16 -ml-4 absolute  top-0">
-                                        <li className="text-sm text-orange-500 py-2 px-6"><Link to="/sehir/istanbul">İstanbul</Link></li>
-                                        <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6"><Link to="/sehir/ankara">Ankara</Link></li>
-                                        <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6"><Link to="/sehir/izmir">İzmir</Link></li>
+                                        {cities.map(city => (
+                                            (city.id != 0) && <li className="text-sm text-gray-800 hover:text-orange-500 py-2 px-6" key={city.id}>
+                                                <a href={"/sehir/" + city.name.toLowerCase()}>
+                                                    {city.name}
+                                                </a>
+                                            </li>
+
+                                        ))}
                                     </ul>
                                 ) : (
                                     ""

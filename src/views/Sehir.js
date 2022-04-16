@@ -2,17 +2,18 @@ import React from 'react';
 import PageTitle from '../Components/toolbox/PageTitle';
 
 const Sehir = ({ city, currentCity }) => {
+    console.log(currentCity.hour)
     function iftarHour(currentCity) {
         return (
             <>
-                {(currentCity.hour) ? currentCity.hour.replace("saat", "") : "Yükleniyor..."}
+                {(currentCity.hour) ? currentCity.hour.replace("saat", "") : 0}
             </>
         )
     }
     function iftarMin(currentCity) {
         return (
             <>
-                {(currentCity.min) ? currentCity.min.replace("dakika.", "") : "Yükleniyor..."}
+                {(currentCity.min) ? currentCity.min.replace("dakika.", "") : 0}
             </>
         )
     }
@@ -48,6 +49,14 @@ const Sehir = ({ city, currentCity }) => {
                     </div>
                     <div className='flex text-xl w-full justify-center pt-5'>
                         {remainingTimeRender(currentCity)}
+                    </div>
+                    <div className='flex text-xl w-full justify-center pt-5'>
+                        <p className='text-center font-semibold'>
+                            {city.toUpperCase()} İFTAR SAATİ
+                            <br />
+                            <p className='text-orange-500 text-3xl'>{currentCity.time}</p>
+                        </p>
+
                     </div>
 
                     {/* <div className='pt-5'>
