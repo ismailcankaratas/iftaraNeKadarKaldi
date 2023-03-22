@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/iftaraNeKadarKaldi/static/css/main.87648bfb.css",
+    "main.js": "/iftaraNeKadarKaldi/static/js/main.adb80cb0.js",
+    "index.html": "/iftaraNeKadarKaldi/index.html",
+    "main.87648bfb.css.map": "/iftaraNeKadarKaldi/static/css/main.87648bfb.css.map",
+    "main.adb80cb0.js.map": "/iftaraNeKadarKaldi/static/js/main.adb80cb0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87648bfb.css",
+    "static/js/main.adb80cb0.js"
+  ]
+}
