@@ -6,4 +6,7 @@
     * {
         @apply outline-none
     }
+    body {
+        @apply bg-[#0f172a]
+    }
 }

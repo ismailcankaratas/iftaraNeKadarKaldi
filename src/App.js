@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-gray-200 pb-10">
+      <div className="bg-[#0f172a] pb-10">
         <Navbar />
         {/* <div className="container px-6 mx-auto">
           <div className="rounded shadow relative bg-white z-10 -mt-8 mb-8 w-full h-96">

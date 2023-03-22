@@ -5,12 +5,12 @@ import Sehir from "../../views/Sehir";
 import { useEffect, useState } from "react";
 
 function Iftar({ city, currentCity }) {
-    const [sehir, setSehir] = useState(city);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getCurrentCityAsync(city));
-    }, [sehir]);
+        console.log(city);
+    }, [city]);
 
     return (
         <Sehir

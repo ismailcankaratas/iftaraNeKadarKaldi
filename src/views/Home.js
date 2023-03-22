@@ -9,7 +9,7 @@ const Home = () => {
         <>
             <PageTitle title="İftara Ne Kadar Kaldı?" whatsappMessage={"İftara ne kadar kaldığını görmek için: " + window.location.href} />
             <div className="container px-6 mx-auto">
-                <div className="rounded shadow relative bg-white z-10 -mt-8 mb-8 w-full h-96">
+                <div className="rounded shadow relative bg-[#1e293b] z-10 -mt-8 mb-8 w-full h-96">
                     <div className="flex justify-center pt-6 pb-3">
                         <img src={Logo} alt="" width="100" />
                     </div>
@@ -24,7 +24,7 @@ const Home = () => {
                     </div>
                     <div>
                         <div className='flex justify-center'>
-                            <h2 className='font-semibold text-2xl mb-4'>Hızlı Seçim</h2>
+                            <h2 className='font-semibold text-2xl text-white mb-4'>Hızlı Seçim</h2>
                         </div>
                         <div className='flex space-x-3 justify-center'>
                             <Link to="/sehir/istanbul" className='border-orange-700 border text-orange-700 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-md'>İstanbul</Link>

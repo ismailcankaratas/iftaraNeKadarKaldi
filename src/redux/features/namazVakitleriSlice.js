@@ -85,7 +85,7 @@ const initialState = {
         { "id": "80", "name": "OSMANİYE" },
         { "id": "81", "name": "DÜZCE" },
     ],
-    currentCity: {},
+    currentCity: {loading: true},
 }
 
 export const namazVakitleriSlice = createSlice({
@@ -102,6 +102,8 @@ export const namazVakitleriSlice = createSlice({
 })
 
 export const getCurrentCityAsync = (city) => (dispatch) => {
+    let currentCity = {loading: true};
+    dispatch(getCurrentCity(currentCity)) 
     const apiUrl = "https://api.collectapi.com/pray/single?ezan=Akşam&data.city=" + dispatch(Cevir(city));
     const apiKey = "1Ob5SswhEmezvoNBbIz3Uh:05wGrbFPN9ZiFjZUzw54HK"
     dispatch(getCityChange(city));
@@ -113,7 +115,7 @@ export const getCurrentCityAsync = (city) => (dispatch) => {
         },
     })
         .then(response => response.json())
-        .then(response => { dispatch(getCurrentCity(response.result[0])) })
+        .then(response => { response.loading = false; dispatch(getCurrentCity(response.result[0])) })
         .catch(handleError);
 }
 export function handleError(error) {
