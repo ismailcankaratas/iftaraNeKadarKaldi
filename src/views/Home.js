@@ -27,9 +27,9 @@ const Home = () => {
                             <h2 className='font-semibold text-2xl text-white mb-4'>Hızlı Seçim</h2>
                         </div>
                         <div className='flex space-x-3 justify-center'>
-                            <Link to="/sehir/istanbul" className='border-orange-700 border text-orange-700 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-md'>İstanbul</Link>
-                            <Link to="/sehir/ankara" className='border-orange-700 border text-orange-700 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-md'>Ankara</Link>
-                            <Link to="/sehir/izmir" className='border-orange-700 border text-orange-700 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-md'>İzmir</Link>
+                            <Link to="/iftaraNeKadarKaldi/sehir/istanbul" className='border-orange-700 border text-orange-700 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-md'>İstanbul</Link>
+                            <Link to="/iftaraNeKadarKaldi/sehir/ankara" className='border-orange-700 border text-orange-700 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-md'>Ankara</Link>
+                            <Link to="/iftaraNeKadarKaldi/sehir/izmir" className='border-orange-700 border text-orange-700 hover:bg-orange-600 hover:text-white py-1 px-2 rounded-md'>İzmir</Link>
                         </div>
                     </div>
                 </div>

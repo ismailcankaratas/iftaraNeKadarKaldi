@@ -12,7 +12,7 @@ export default function Navbar(props) {
     const navigate = useNavigate();
     
     function cityToNavigate(city) {
-        navigate("/sehir/" + city.toLowerCase());
+        navigate("/iftaraNeKadarKaldi/sehir/" + city.toLowerCase());
     }
     return (
         <>
@@ -91,7 +91,7 @@ export default function Navbar(props) {
                                                 <ul className="my-3">
                                                     {cities.map(city => (
                                                         <li className="text-sm hover:text-orange-500 py-2 px-6" key={city.id}>
-                                                            <a href={"/sehir/" + city.name.toLowerCase()}>
+                                                            <a href={"/iftaraNeKadarKaldi/sehir/" + city.name.toLowerCase()}>
                                                                 {city.name}
                                                             </a>
                                                         </li>
@@ -151,7 +151,7 @@ export default function Navbar(props) {
                 <div className="justify-between container px-6 h-16 flex items-center lg:items-stretch mx-auto">
                     <div className="flex items-center">
                         <div className="mr-10 flex items-center">
-                            <Link to="/">
+                            <Link to="/iftaraNeKadarKaldi">
                                 <img src={Logo} width="44px" />
                             </Link>
                             <h3 className="text-base text-slate-400 font-bold tracking-normal leading-tight ml-3 hidden lg:block">
@@ -160,7 +160,7 @@ export default function Navbar(props) {
                         </div>
                         <ul className="pr-32 xl:flex hidden items-center h-full space-x-4">
                             <li className="hover:text-orange-600 cursor-pointer h-full flex items-center text-sm text-orange-600 tracking-normal">
-                                <Link to="/">AnaSayfa</Link>
+                                <Link to="/iftaraNeKadarKaldi">AnaSayfa</Link>
                             </li>
                             <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-slate-400 tracking-normal relative" 
                             onClick={() => setDeliverables(!deliverables)}>
@@ -192,18 +192,14 @@ export default function Navbar(props) {
                         <div className="h-full flex items-center">
                             <div className="w-32 pr-16 h-full flex items-center justify-end border-r" />
                             <div className="w-full h-full flex">
-                                <div className="w-16 xl:w-32 h-full flex items-center justify-center xl:border-r">
+                                <a href="https://github.com/ismailcankaratas/iftaraNeKadarKaldi" 
+                                target="_blank"
+                                className="w-16 xl:w-32 h-full flex items-center justify-center xl:border-r">
                                     <div className="relative">
-                                        <div className="cursor-pointer w-6 h-6 xl:w-auto xl:h-auto text-slate-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-bell" width={28} height={28} viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" />
-                                                <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
-                                                <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
-                                            </svg>
-                                        </div>
+                                        <img className="w-8" src="/iftaraNeKadarKaldi/github-mark-white.png" alt="" />
                                         <div className="animate-ping w-2 h-2 rounded-full bg-red-400 border border-white absolute inset-0 mt-1 mr-1 m-auto" />
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

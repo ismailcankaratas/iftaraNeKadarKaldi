@@ -22,7 +22,7 @@ export default function ComboBox() {
             )
     function selectToNavigate(event) {
         setSelected(event)
-        navigate("/sehir/" + event.name.toLowerCase());
+        navigate("/iftaraNeKadarKaldi/sehir/" + event.name.toLowerCase());
     }
     return (
         <>
@@ -76,7 +76,7 @@ export default function ComboBox() {
                                         {({ selected, active }) => (
                                             <>
                                                 <Link
-                                                    to={"/sehir/" + city.name.toLowerCase()}
+                                                    to={"/iftaraNeKadarKaldi/sehir/" + city.name.toLowerCase()}
                                                     className={`block truncate ${selected ? 'font-medium' : 'font-normal'
                                                         }`}
                                                 >
@@ -87,7 +87,7 @@ export default function ComboBox() {
                                                 </Link>
                                                 {selected ? (
                                                     <Link
-                                                        to={"/sehir/" + city.name.toLowerCase()}
+                                                        to={"/iftaraNeKadarKaldi/sehir/" + city.name.toLowerCase()}
                                                         className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-teal-600'
                                                             }`}
                                                     >

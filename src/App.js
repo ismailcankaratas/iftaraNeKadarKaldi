@@ -16,8 +16,8 @@ function App() {
           </div>
         </div> */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sehir/:sehir" element={<Iftar />} />
+          <Route path="/iftaraNeKadarKaldi" element={<Home />} />
+          <Route path="/iftaraNeKadarKaldi/sehir/:sehir" element={<Iftar />} />
         </Routes>
       </div>
     </>
