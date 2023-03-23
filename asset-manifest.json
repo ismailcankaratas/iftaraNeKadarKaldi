@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/iftaraNeKadarKaldi/static/css/main.87648bfb.css",
-    "main.js": "/iftaraNeKadarKaldi/static/js/main.adb80cb0.js",
+    "main.css": "/iftaraNeKadarKaldi/static/css/main.92fc5ea3.css",
+    "main.js": "/iftaraNeKadarKaldi/static/js/main.2ca31dc8.js",
     "index.html": "/iftaraNeKadarKaldi/index.html",
-    "main.87648bfb.css.map": "/iftaraNeKadarKaldi/static/css/main.87648bfb.css.map",
-    "main.adb80cb0.js.map": "/iftaraNeKadarKaldi/static/js/main.adb80cb0.js.map"
+    "main.92fc5ea3.css.map": "/iftaraNeKadarKaldi/static/css/main.92fc5ea3.css.map",
+    "main.2ca31dc8.js.map": "/iftaraNeKadarKaldi/static/js/main.2ca31dc8.js.map"
   },
   "entrypoints": [
-    "static/css/main.87648bfb.css",
-    "static/js/main.adb80cb0.js"
+    "static/css/main.92fc5ea3.css",
+    "static/js/main.2ca31dc8.js"
   ]
 }
