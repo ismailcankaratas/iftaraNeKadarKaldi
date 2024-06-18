@@ -1,7 +1,7 @@
 # İftara Ne Kadar Kaldı ? 
 
 ## Description
-Türkiye deki tüm illerin iftar vakitlerine ne kadar kaldığını gösteren proje. **[Projeyi canlı görün](https://iftaranekadarkaldi.netlify.app/).**
+Türkiye deki tüm illerin iftar vakitlerine ne kadar kaldığını gösteren proje. **[Projeyi canlı görün](https://ismailcankaratas.com.tr/iftaraNeKadarKaldi/).**
 
 ## Tecnologies
 - ReactJS v18.0.0
